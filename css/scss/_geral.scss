@@ -1,0 +1,19 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: $very-dark-blue;
+  background-image: url(../../images/bg-desktop-dark.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  body{
+    background-image: url(../../images/bg-mobile-dark.jpg);
+  }
+}

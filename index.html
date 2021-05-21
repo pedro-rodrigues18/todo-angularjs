@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="todoApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lib/angular.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/controller.js"></script>
+</head>
+
+<body ng-controller="todoAppCtrl">
+  <div class="cabecalho">
+    <h1>T O D O</h1>
+    <img src="images/icon-sun.svg" alt="Sun" class="logo-tema">
+  </div>
+
+  <div class="input-tarefa">
+    <span class="check-tarefa"></span>
+    <input type="text" name="tarefa" ng-model="tarefa" placeholder="Insira a tarefa...">
+  </div>
+
+  <div class="lista-todo">
+    <ul>
+      <li class="tarefa">
+        <span class="check-tarefa"></span>
+        <p>teste 1</p>
+      </li>
+      <li class="tarefa">
+        <span class="check-tarefa"></span>
+        <p>teste 2</p>
+      </li>
+      <li class="tarefa">
+        <span class="check-tarefa"></span>
+        <p>teste 3</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="rodape">
+    <div class="contador">
+      <p id="numero-de-tarefas">0 items restantes</p>
+    </div>
+    <div class="filtros">
+      <a href="#" class="link-filtros">
+        <p>Todos</p>
+      </a>
+      <a href="#" class="link-filtros">
+        <p>Fazer</p>
+      </a>
+      <a href="#" class="link-filtros">
+        <p>Concluídos</p>
+      </a>
+    </div>
+    <a href="#" class="link-filtros" onclick="removerTodasTarefas();">
+      <p>Limpar tudo</p>
+    </a>
+
+  </div>
+</body>
+
+</html>

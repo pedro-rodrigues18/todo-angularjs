@@ -1,0 +1,83 @@
+// Cabecalho
+.cabecalho {
+  // background-color: red;
+  width: 530px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 15px 0;
+  font-size: 32px;
+  
+  .logo-tema {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+// Input
+.input-tarefa {
+  background-color: $very-dark-desaturated-blue;
+  color: $dark-grayish-blue;
+  width: 500px;
+  padding: 15px;
+  display: flex;
+  margin-top: 10px;
+  border-radius: 5px;
+
+  :nth-child(1) {
+    margin-right: 15px;
+  }
+
+  :nth-child(2){
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: white;
+  }
+
+}
+
+// Lista Todo
+.lista-todo {
+  background-color: $very-dark-desaturated-blue;
+  margin-top: 10px;
+  width: 530px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+  li {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px $light-grayish-blue;
+    :first-child{
+      margin: 0 15px 0 15px;
+    }
+  }
+}
+
+// Rodapé
+.rodape {
+  background-color: $very-dark-desaturated-blue;
+  color: $dark-grayish-blue;
+  width: 500px;
+  padding: 15px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  a{
+    color: $dark-grayish-blue;
+  }
+}
+
+.filtros{
+  display: flex;
+  :nth-child(2){
+    margin: 0 7px 0 7px;
+  }
+}
