@@ -3,8 +3,12 @@
   width: 20px;
   height: 20px;
   border: 1.75px solid $very-dark-grayish-blue;
-  border-radius: 50% !important;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  img{
+    visibility: hidden;
+  }
 }

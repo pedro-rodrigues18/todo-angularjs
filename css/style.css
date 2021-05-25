@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 6, ../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
+/* line 6, ../../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,53 +25,53 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 27, ../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
+/* line 27, ../../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, ../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
+/* line 31, ../../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, ../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
+/* line 34, ../../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, ../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
+/* line 37, ../../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 40, ../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
+/* line 40, ../../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 45, ../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
+/* line 45, ../../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 50, ../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
+/* line 50, ../../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
 textarea:focus, input:focus, select:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
 }
 
-/* line 55, ../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
+/* line 55, ../../../Documents/GitHub/todo-angularjs/css/scss/_reset.scss */
 a {
   text-decoration: none;
 }
 
-/* line 1, ../../Documents/GitHub/todo-angularjs/css/scss/_geral.scss */
+/* line 1, ../../../Documents/GitHub/todo-angularjs/css/scss/_geral.scss */
 body {
   display: flex;
   flex-direction: column;
@@ -86,13 +86,13 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  /* line 16, ../../Documents/GitHub/todo-angularjs/css/scss/_geral.scss */
+  /* line 16, ../../../Documents/GitHub/todo-angularjs/css/scss/_geral.scss */
   body {
     background-image: url(../../images/bg-mobile-dark.jpg);
   }
 }
 
-/* line 2, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 2, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .cabecalho {
   width: 530px;
   display: flex;
@@ -103,13 +103,13 @@ body {
   font-size: 32px;
 }
 
-/* line 12, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 12, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .cabecalho .logo-tema {
   width: 25px;
   height: 25px;
 }
 
-/* line 19, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 19, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .input-tarefa {
   background-color: #25273c;
   color: #777a92;
@@ -120,16 +120,16 @@ body {
   border-radius: 5px;
 }
 
-/* line 28, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 28, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .input-tarefa :nth-child(2) {
-  width: 100%;
+  width: 90%;
   border: none;
   background-color: transparent;
   color: white;
   margin-left: 15px;
 }
 
-/* line 39, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 39, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .lista-todo {
   background-color: #25273c;
   margin-top: 10px;
@@ -138,20 +138,36 @@ body {
   border-top-left-radius: 5px;
 }
 
-/* line 46, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 46, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .lista-todo li {
-  padding: 20px 0;
+  padding: 20px 15px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px #cacde8;
 }
 
-/* line 51, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
-.lista-todo li :first-child {
-  margin: 0 15px 0 15px;
+/* line 53, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+.lista-todo li .marcar-tarefa {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: white;
 }
 
-/* line 58, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 60, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+.lista-todo li .marcar-tarefa p {
+  margin-left: 15px;
+}
+
+/* line 66, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+.lista-todo li #remover-tarefa img {
+  width: 18px;
+  height: 18px;
+}
+
+/* line 76, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .rodape {
   background-color: #25273c;
   color: #777a92;
@@ -165,31 +181,56 @@ body {
   border-bottom-left-radius: 5px;
 }
 
-/* line 70, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 88, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .rodape a {
   color: #777a92;
 }
 
-/* line 75, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 93, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .filtros {
   display: flex;
 }
 
-/* line 77, ../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
+/* line 95, ../../../Documents/GitHub/todo-angularjs/css/scss/_todo.scss */
 .filtros :nth-child(2) {
   margin: 0 7px 0 7px;
 }
 
-/* line 1, ../../Documents/GitHub/todo-angularjs/css/scss/_check-tarefa.scss */
+/* line 1, ../../../Documents/GitHub/todo-angularjs/css/scss/_check-tarefa.scss */
 .check-tarefa {
   background: transparent;
   width: 20px;
   height: 20px;
   border: 1.75px solid #393a4c;
-  border-radius: 50% !important;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* line 11, ../../../Documents/GitHub/todo-angularjs/css/scss/_check-tarefa.scss */
+.check-tarefa img {
+  visibility: hidden;
+}
+
+/* line 2, ../../../Documents/GitHub/todo-angularjs/css/scss/_check-tarefa-concluida.scss */
+.check-tarefa-concluida :nth-child(1) {
+  background: linear-gradient(#57ddff, #c058f3);
+  border-color: #57ddff;
+}
+
+/* line 5, ../../../Documents/GitHub/todo-angularjs/css/scss/_check-tarefa-concluida.scss */
+.check-tarefa-concluida :nth-child(1) img {
+  visibility: visible;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+
+/* line 12, ../../../Documents/GitHub/todo-angularjs/css/scss/_check-tarefa-concluida.scss */
+.check-tarefa-concluida :nth-child(2) {
+  text-decoration: line-through;
+  color: #777a92;
 }
 
 /*# sourceMappingURL=style.css.map */

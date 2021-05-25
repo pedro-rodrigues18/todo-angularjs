@@ -1,0 +1,16 @@
+.check-tarefa-concluida{
+  :nth-child(1){
+    background: $check-gradient-color;
+    border-color: #57ddff; // Também precisa ser um gradiente
+    img{
+      visibility: visible;
+      width: 10px;
+      height: 10px;
+      background: transparent;
+    }
+  }
+  :nth-child(2){
+    text-decoration: line-through;
+    color: $dark-grayish-blue;
+  }
+}

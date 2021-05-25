@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo App</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -20,31 +21,31 @@
     <img src="images/icon-sun.svg" alt="Sun" class="logo-tema">
   </div>
 
-  <div class="input-tarefa">
-    <span class="check-tarefa"></span>
-    <input type="text" name="tarefa" ng-model="tarefa" placeholder="Insira a tarefa...">
-  </div>
+  <!-- {{tarefas}} -->
 
-  <div class="lista-todo">
-    <ul>
-      <li class="tarefa">
-        <span class="check-tarefa"></span>
-        <p>teste 1</p>
-      </li>
-      <li class="tarefa">
-        <span class="check-tarefa"></span>
-        <p>teste 2</p>
-      </li>
-      <li class="tarefa">
-        <span class="check-tarefa"></span>
-        <p>teste 3</p>
-      </li>
-    </ul>
-  </div>
+  <form class="input-tarefa" ng-submit="inserir()">
+    <span class="check-tarefa"></span>
+    <input type="text" id="texto" name="texto" ng-model="texto" placeholder="Insira a tarefa...">
+  </form>
+
+  <ul class="lista-todo">
+
+    <li class="tarefa" ng-repeat="tarefa in tarefas">
+      <a href="#" class="marcar-tarefa" ng-click="marcarOuDesmarcarTarefa(tarefa)"
+        ng-class="{'check-tarefa-concluida': tarefa.check == true}">
+        <span class="check-tarefa"><img src="./images/icon-check.svg" alt="check"></span>
+        <p>{{tarefa.texto}}</p>
+      </a>
+      <a href="#" id="remover-tarefa" ng-click="removerTarefa(tarefa)">
+        <img src="./images/icon-cross.svg" alt="Remover Tarefa">
+      </a>
+    </li>
+
+  </ul>
 
   <div class="rodape">
     <div class="contador">
-      <p id="numero-de-tarefas">0 items restantes</p>
+      <p id="numero-de-tarefas" ng-click="contador()">{{cont}} itens restantes</p>
     </div>
     <div class="filtros">
       <a href="#" class="link-filtros">
@@ -57,8 +58,8 @@
         <p>Concluídos</p>
       </a>
     </div>
-    <a href="#" class="link-filtros" onclick="removerTodasTarefas();">
-      <p>Limpar tudo</p>
+    <a href="#" class="link-filtros" ng-click="removerConcluidos()">
+      <p>Limpar Concluidos</p>
     </a>
 
   </div>
