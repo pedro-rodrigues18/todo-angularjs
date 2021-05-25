@@ -25,15 +25,12 @@
   margin-top: 10px;
   border-radius: 5px;
 
-  :nth-child(1) {
-    margin-right: 15px;
-  }
-
   :nth-child(2){
     width: 100%;
     border: none;
     background-color: transparent;
     color: white;
+    margin-left: 15px;
   }
 
 }
