@@ -12,29 +12,40 @@ angular.module("todoApp").controller("todoAppCtrl", ['$scope', function ($scope)
     } else {
       alert("Não é possível criar tarefa vazia.");
     }
+    contador();
   }
 
   $scope.removerTarefa = function (tarefa) {
     let posicao = $scope.tarefas.indexOf(tarefa);
     $scope.tarefas.splice(posicao, 1);
+    contador();
   }
 
 
   $scope.marcarOuDesmarcarTarefa = function (tarefa) {
     if (!tarefa.check) tarefa.check = true;
     else tarefa.check = false;
+    contador();
   }
 
+
   $scope.removerConcluidos = function () {
-    let inconcluidos = $scope.tarefas.filter((tarefa) => {
+    let inconcluidos = retornaTarefasIncompletas();
+    $scope.tarefas = inconcluidos;
+
+    contador();
+  }
+
+  function retornaTarefasIncompletas() {
+    return $scope.tarefas.filter((tarefa) => {
       if (!tarefa.check)
         return tarefa;
     });
-    $scope.tarefas = inconcluidos;
   }
 
-  $scope.contador = function () {
-    //TODO
+  function contador() {
+    let inconcluidos = retornaTarefasIncompletas();
+    $scope.cont = inconcluidos.length;
   }
 
 }]);

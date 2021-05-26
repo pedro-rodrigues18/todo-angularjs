@@ -11,17 +11,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/lib/angular.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
   <script src="js/controller.js"></script>
 </head>
 
 <body ng-controller="todoAppCtrl">
   <div class="cabecalho">
     <h1>T O D O</h1>
-    <img src="images/icon-sun.svg" alt="Sun" class="logo-tema">
+    <a href="#">
+      <img src="images/icon-sun.svg" alt="Sun" class="logo-tema">
+    </a>
   </div>
-
-  <!-- {{tarefas}} -->
 
   <form class="input-tarefa" ng-submit="inserir()">
     <span class="check-tarefa"></span>
