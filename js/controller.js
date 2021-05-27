@@ -3,6 +3,7 @@ angular.module("todoApp").controller("todoAppCtrl", ['$scope', function ($scope)
   $scope.tarefas = [];
   $scope.tarefa = { texto: '', check: false };
   $scope.cont = 0;
+  $scope.filtro = '';
 
   $scope.inserir = function () {
     if ($scope.texto) {
@@ -32,14 +33,18 @@ angular.module("todoApp").controller("todoAppCtrl", ['$scope', function ($scope)
   $scope.removerConcluidos = function () {
     let inconcluidos = retornaTarefasIncompletas();
     $scope.tarefas = inconcluidos;
-
     contador();
+  }
+
+  $scope.filtrar = function (filtro = '') {
+    if (filtro == true) $scope.filtro = filtro;
+    else if (filtro == false) $scope.filtro = filtro;
+    else $scope.filtro = filtro;
   }
 
   function retornaTarefasIncompletas() {
     return $scope.tarefas.filter((tarefa) => {
-      if (!tarefa.check)
-        return tarefa;
+      if (!tarefa.check) return tarefa;
     });
   }
 
