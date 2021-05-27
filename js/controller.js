@@ -37,9 +37,7 @@ angular.module("todoApp").controller("todoAppCtrl", ['$scope', function ($scope)
   }
 
   $scope.filtrar = function (filtro = '') {
-    if (filtro == true) $scope.filtro = filtro;
-    else if (filtro == false) $scope.filtro = filtro;
-    else $scope.filtro = filtro;
+    $scope.filtro = filtro;
   }
 
   function retornaTarefasIncompletas() {

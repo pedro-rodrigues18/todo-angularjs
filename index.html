@@ -30,7 +30,7 @@
 
   <ul class="lista-todo">
 
-    <li class="tarefa" ng-repeat="tarefa in tarefas | filter: filtro">
+    <li class="tarefa" ng-repeat="tarefa in tarefas | filter: {'check': filtro}">
       <a href="#" class="marcar-tarefa" ng-click="marcarOuDesmarcarTarefa(tarefa)"
         ng-class="{'check-tarefa-concluida': tarefa.check == true}">
         <span class="check-tarefa"><img src="./images/icon-check.svg" alt="check"></span>
